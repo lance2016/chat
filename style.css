@@ -1,0 +1,173 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#clock {
+    font-size: 14px;
+    color: #54595f;
+    margin-top: auto;
+}
+
+
+.avatar {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.chat-message {
+    display: inline-block;
+}
+
+
+
+/* 修改滚动条颜色为灰色 */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f3f3f3;
+}
+
+/* 修改滚动条滑块颜色 */
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(157, 174, 173);
+}
+
+.container {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chatbox {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 100%;
+    margin: 0 0 20px;
+    overflow-y: scroll;
+    padding: 10px;
+    min-height: 300px;
+}
+
+/*   
+#chatbox {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 550px;
+    margin: 0 0 20px;
+    overflow-y: scroll;
+    padding: 10px;
+} */
+
+.chat-message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.user {
+    background-color: #95ec69;
+    color: #333;
+}
+
+.chatbot {
+    background-color: #ffffff;
+    color: #333;
+}
+
+#input-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-field {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    flex-grow: 1;
+}
+
+#submit-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #3e8e41;
+}
+
+#export-button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#export-button:hover {
+    background-color: #006f8b;
+}
+
+
+
+.message-time {
+    font-size: 12px;
+    color: gray;
+    margin: 4px 0;
+    text-align: right;
+}
+
+.user-avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-size: 100% 100%;
+    background-image: url('https://i.328888.xyz/2023/02/18/BxyZa.th.jpeg');
+    /* 可以设置背景图片或者使用其它样式来代替 */
+}
+
+.bot-avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-size: 100% 100%;
+    background-image: url('https://i.328888.xyz/2023/02/18/BxV5w.th.jpeg');
+    /* 可以设置背景图片或者使用其它样式来代替 */
+}
