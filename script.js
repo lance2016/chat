@@ -1,7 +1,7 @@
-const time1 = document.getElementById('time1');
-time1.innerHTML = new Date().toLocaleString();
-const time2 = document.getElementById('time2');
-time2.innerHTML = new Date().toLocaleString();
+// const time1 = document.getElementById('time1');
+// time1.innerHTML = new Date().toLocaleString();
+// const time2 = document.getElementById('time2');
+// time2.innerHTML = new Date().toLocaleString();
 
 
 function updateClock() {
@@ -27,11 +27,12 @@ const inputForm = document.getElementById('input-form');
 const inputField = document.getElementById('input-field');
 const chatBox = document.getElementById('chatbox');
 const exportButton = document.getElementById('export-button');
+const clearButton = document.getElementById("clear-button");
 
 // Event listeners
 inputForm.addEventListener('submit', submitForm);
 exportButton.addEventListener('click', exportChat);
-
+clearButton.addEventListener('click', clearChatHistory);
 
 function sendMessage() {
     // 获取当前时间戳
@@ -111,7 +112,7 @@ function formatTimestamp(timestamp) {
 
 async function getResponse(query) {
     try {
-        const response = await fetch('http://10.134.49.15:18000/chat/', {
+        const response = await fetch('http://10.134.49.15:18000/langchain/conversation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -179,6 +180,25 @@ function renderData(data, dialog) {
    
 }
 
+async function clearChatHistory() {
+    try {
+      const response = await fetch("http://10.134.49.15:18000/langchain/clear", { method: "GET" });
+      console.log(response)
+      console.log(response.body)
+      if (response.ok) {
+        console.log("Chat history cleared successfully");
+        alertify.success("清空聊天记录成功");
+        chatBox.innerHTML="";
+        
+      } else {
+        console.error("Failed to clear chat history");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  
 
 // 导出聊天记录
 function exportChat() {

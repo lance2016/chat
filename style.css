@@ -50,14 +50,19 @@ h1 {
     color: rgb(157, 174, 173);
 }
 
+.title{
+    text-align: center;
+    color: rgb(157, 174, 173);
+    font-size: 20px;
+}
 .container {
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     height: 95vh;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    /* margin: 0 auto; */
     background-color: #f3f3f3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -113,36 +118,6 @@ h1 {
     flex-grow: 1;
 }
 
-#submit-button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#submit-button:hover {
-    background-color: #3e8e41;
-}
-
-#export-button {
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-#export-button:hover {
-    background-color: #006f8b;
-}
-
-
-
 .message-time {
     font-size: 12px;
     color: gray;
@@ -171,3 +146,114 @@ h1 {
     background-image: url('https://i.328888.xyz/2023/02/18/BxV5w.th.jpeg');
     /* 可以设置背景图片或者使用其它样式来代替 */
 }
+
+#submit-button {
+    background-color: #4caf50;
+}
+
+
+
+#export-button {
+    background-color: #008CBA;
+}
+
+#clear-button {
+    background-color: #f44336;
+    /* 设置背景颜色为红色 */
+}
+
+
+#submit-button:hover {
+    background-color: #3e8e41;
+}
+
+#export-button:hover {
+    background-color: #006f8b;
+}
+
+#clear-button:hover {
+    background-color: #ff6666;
+    /* 设置鼠标悬停时的背景颜色 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    /* 添加阴影效果 */
+}
+
+
+#input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#input-field {
+    width: 90%;
+    /* 将宽度设置为相对宽度 */
+    /* max-width: 500px; 设置最大宽度为500px，以避免宽度过大 */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*   
+  #submit-button,
+  #export-button,
+  #clear-button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+  } */
+
+
+#submit-button,
+#export-button,
+#clear-button {
+    /* flex-basis: 30%; */
+    margin-top: 10px;
+    padding: 10px 20px;
+    /* width: 90%; */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#submit-button:hover,
+#export-button:hover,
+#clear-button:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 在移动设备上隐藏删除按钮 */
+@media only screen and (max-width: 500px) {
+    #export-button {
+        display: none;
+    }
+
+    #clear-button {
+        display: none;
+    }
+
+    #submit-button {
+        display: none;
+    }
+}
+
+.button-container {
+    overflow: hidden;
+  }
+
+  .button-container button {
+    float: left;
+    margin-right: 10px;
+  }

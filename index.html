@@ -3,33 +3,40 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Chatbot With Me</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/themes/default.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+
 </head>
 
 <body>
   <div class="container">
 
     <div class="header">
-      <h1>Chat With Me</h1>
-      <div id="clock" class="clock">00:00:00</div>
+      <div style="margin: 10px;" class="title">Chat With Me</div>
+      <div id="clock" class="clock" style="margin: 10px;">00:00:00</div>
     </div>
     <div id="chatbox">
       <div class="user-message">
-        <div class="chat-message user" >Hello, Chatbot!</div>
-        <div class="message-time" id="time1"> 00:00:00 </div>
+        <!-- <div class="chat-message user" >Hello, Chatbot!</div>
+        <div class="message-time" id="time1"> 00:00:00 </div> -->
       </div>
       <div class="bot-message">
-        <div class="chat-message chatbot">Hi there, how can I help you today?</div>
-        <div class="message-time" id="time2">00:00:00</div>
+        <!-- <div class="chat-message chatbot">Hi there, how can I help you today?</div>
+        <div class="message-time" id="time2">00:00:00</div> -->
       </div>
     </div>
     
     <form id="input-form">
       <input type="text" id="input-field" placeholder="Type a message...">
-      <button type="submit" id="submit-button">Send</button>
-      <button id="export-button">Export Chat History</button>
-      <!-- <button id="save-button">Save Chat History</button> -->
+      <div class="button-container">
+        <button type="submit" id="submit-button">Send</button>
+        <button id="export-button">Export Chat History</button>
+        <button id="clear-button">Clear Chat History</button>
+      </div>
     </form>
   </div>
 </body>
